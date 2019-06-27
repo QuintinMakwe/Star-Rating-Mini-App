@@ -2,3 +2,6 @@ task 1 - finish up/commit to repo, the star rating app - 1 hour:: status => clea
 tast 2 - watch the video for the auto complete app - 1 hour
 tast 3 - enroute to the bank - 1 hour
 task 4 - finish up/commit to repo, the auto complete app - 1 hour
+
+git remote add origin https://github.com/QuintinMakwe/Star-Rating-Mini-App.git
+git push -u origin master
