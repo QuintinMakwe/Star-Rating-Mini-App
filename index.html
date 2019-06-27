@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css" />
   </head>
   <body>
-    <d iv class="container">
+    <div class="container">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -62,4 +62,36 @@
       </table>
     </div>
   </body>
+  <script>
+    //initial ratings
+    const ratings = {
+      sony: 4.7,
+      samsung: 4.2,
+      vizio: 2.4,
+      panasonic: 3.5,
+      phillips: 1.2
+    };
+
+    //Total stars
+    const starsTotal = 5;
+
+    //Run getRatings when DOM loads
+    document.addEventListener("DOMContentLoaded", getRatings);
+
+    //Get ratings
+    function getRatings() {
+      for (let rating in ratings) {
+        //Get percentage
+        const starPercentage = (ratings[rating] / starsTotal) * 100;
+
+        //Round to the nearest 10
+        const starPercentageRounded = `${Math.round(starPecentage / 10) * 10}%`;
+
+        //Set width of stars-inner to percentage
+        document.querySelector(
+          `.${rating}.stars-inner`
+        ).style.width = starPercentageRounded;
+      }
+    }
+  </script>
 </html>
